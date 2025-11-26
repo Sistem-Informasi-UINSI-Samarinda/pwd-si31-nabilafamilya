@@ -1,4 +1,4 @@
-<?php
+<?php 
 include 'config/koneksi.php';
 
 $username = "admin";
@@ -7,14 +7,14 @@ $password = password_hash("123456", PASSWORD_DEFAULT);
 $nama_lengkap = "Administrator";
 
 $query = "
-            INSERT INTO users (username, email, password, nama_lengkap)
+            INSERT INTO nabila (username, email, password, nama_lengkap)
             VALUES ('$username', '$email', '$password', '$nama_lengkap')
-         ";
+        ";
 
 if(mysqli_query($conn, $query)){
     echo "Akun admin telah tersedia";
 } else {
-    echo "Gagal membuat akun". mysqli_error($conn);
+    echo "Gagal membuat akun ". mysqli_error($conn);
 }
 
 ?>
